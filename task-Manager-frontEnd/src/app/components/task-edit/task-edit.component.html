@@ -1,0 +1,26 @@
+<p>task-edit works!{{currentTaskId}}</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <form [formGroup]="editTaskForm" (ngSubmit)="onEditTask()">
+                <h2 class="text-danger mt-3">Edit Task</h2>
+                <label for="title" class="form-label">Title : </label>
+                <input type="text" class="form-control" id="" formControlName="title">
+                <label for="description" class="form-label">Description : </label>
+                <input type="text" class="form-control" id="" formControlName="description">
+                <label for="dueDate" class="form-label">Due Date : </label>
+                <input type="date" class="form-control" id="" formControlName="dueDate">
+                <label for="priority" class="form-label">Select the priority</label>
+                <select formControlName="priority" class="form-control">
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+                <button type="submit" class="btn btn-primary mt-3" [disabled]="editTaskForm.invalid">Update</button>
+            </form>
+        </div>
+        <div class="col-2"></div>
+    </div>
+</div>

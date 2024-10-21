@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <form [formGroup]="addUserForm" (ngSubmit)="onAddUser()">
+                <h2 class="text-danger mt-3">{{isEditForm? 'Edit User' : 'Add New User'}}</h2>
+                <label for="name" class="form-label">Name : </label>
+                <input type="text" class="form-control" id="name" formControlName="name">
+                <label for="phone" class="form-label">Phone : </label>
+                <input type="text" class="form-control" id="phone" formControlName="phone">
+                <label for="email" class="form-label">Email : </label>
+                <input type="email" class="form-control" id="" formControlName="email">
+                <label for="password" class="form-label">Password : </label>
+                <input type="password" class="form-control" id="" formControlName="password">
+                <button type="submit" class="btn btn-primary mt-3" [disabled]="addUserForm.invalid">Submit</button>
+            </form>
+        </div>
+        <div class="col-2"></div>
+    </div>
+</div>
+

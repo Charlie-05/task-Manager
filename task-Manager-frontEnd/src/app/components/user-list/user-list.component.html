@@ -1,0 +1,49 @@
+<div class="">
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-2">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search user..." aria-label="Search"
+                        [(ngModel)]="features.searchUser" name="searchUser">
+                    <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+                </form>
+            </div>
+            <div class="col-8"></div>
+            <div class="col-1">
+                <button type="button" class="btn btn-dark" [routerLink]="['/add-user']"><i class="bi bi-plus me-2"></i>New
+                    User</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid m-3">
+        <table class="table table-bordered text-center">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Password</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of users |  searchUser : features.searchUser">
+                    <th scope="row">{{user.id}}</th>
+                    <td>{{user.name }}</td>
+                    <td>{{user.phone}}</td>
+                    <td>{{user.email }}</td>
+                    <td>{{user.password}}</td>
+                    <td> <i class="bi bi-pencil bg bg-primary p-2 m-1 text-light rounded-2"
+                            [routerLink]="['/edit-user' ,user.id ]"></i> <i
+                            class="bi bi-trash bg bg-danger text-light p-2 m-1 rounded-2"
+                            (click)="onDeleteUser(user.id)"></i></td>
+                </tr>
+
+            </tbody>
+        </table>
+        
+    </div>
+</div>
