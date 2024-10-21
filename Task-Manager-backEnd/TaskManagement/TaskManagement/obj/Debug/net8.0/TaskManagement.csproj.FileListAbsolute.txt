@@ -775,3 +775,4 @@ X:\Angular\Task_manager_main\Task-Manager-backEnd\TaskManagement\TaskManagement\
 X:\Angular\Task_manager_main\Task-Manager-backEnd\TaskManagement\TaskManagement\obj\Debug\net8.0\TaskManagement.pdb
 X:\Angular\Task_manager_main\Task-Manager-backEnd\TaskManagement\TaskManagement\obj\Debug\net8.0\TaskManagement.genruntimeconfig.cache
 X:\Angular\Task_manager_main\Task-Manager-backEnd\TaskManagement\TaskManagement\obj\Debug\net8.0\ref\TaskManagement.dll
+X:\Angular\Task_manager_main\Task-Manager-backEnd\TaskManagement\TaskManagement\obj\Debug\net8.0\TaskManagement.sourcelink.json
