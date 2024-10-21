@@ -27,7 +27,7 @@ export class TaskAddComponent {
     this.task = (this.addTaskForm.value);
     this.taskService.createtask(this.task).subscribe(data => {
       this.toastr.success("successfully added" , "Success")
-      this.router.navigate(['/']);
+      this.router.navigate(['/tasks']);
     })
   }
 

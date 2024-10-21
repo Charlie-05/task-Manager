@@ -14,12 +14,12 @@ export class AddUserComponent {
   addUserForm: any;
   user: any;
   currentUserId: any;
-  currentUser: User | undefined;
-  isEditForm : boolean = false;
+  currentUser!: User;
+  isEditForm: boolean = false;
 
   constructor(private route: ActivatedRoute, private userService: UserService, private fb: FormBuilder, private router: Router, private toastr: ToastrService) {
     this.currentUserId = this.route.snapshot.paramMap.get("id");
-    if(this.currentUserId){
+    if (this.currentUserId) {
       this.isEditForm = true;
     }
     this.addUserForm = this.fb.group({
@@ -32,7 +32,7 @@ export class AddUserComponent {
   }
 
   ngOnInit(): void {
-    if(this.isEditForm){
+    if (this.isEditForm) {
       this.userService.getUserById(this.currentUserId).subscribe(data => {
         this.currentUser = data;
         console.log(data);
@@ -44,18 +44,21 @@ export class AddUserComponent {
 
   onAddUser() {
     this.user = (this.addUserForm.value);
-    this.user.id = 0;
-    this.userService.createuser(this.user).subscribe(data => {
-      this.toastr.success("successfully added", "Success")
-      this.router.navigate(['/users']);
-    })
+    
+    if (this.isEditForm == false) {
+      this.user.id = 0;
+      this.userService.createuser(this.user).subscribe(data => {
+        this.toastr.success("successfully added", "Success")
+        this.router.navigate(['/users']);
+      })
+    } else if (this.isEditForm == true) {
+      let user = (this.addUserForm.value);
+      this.userService.editUser(user,this.currentUser.id).subscribe(data => {
+        this.toastr.success('successfully updated', 'Success');
+        this.router.navigate(['/users']);
+      });
+    }
+
   }
 
-  onEditUser() {
-    let user = (this.addUserForm.value);
-    this.userService.editUser(user, this.currentUser ? this.currentUser.id : 0).subscribe(data => {
-      this.toastr.success('successfully updated', 'Success');
-      this.router.navigate(['/users']);
-    });
-  }
 }

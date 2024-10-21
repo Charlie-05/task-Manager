@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { User } from '../../Models/user';
+import { BsModalRef } from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-user-list',
@@ -37,21 +38,21 @@ export class UserListComponent {
     })
   }
 
-  // modalRef?: BsModalRef;
-  // message?: string;
-  // constructor(private modalService: BsModalService) {}
+  //  modalRef?: BsModalRef;
+  // // message?: string;
+  // // constructor(private modalService: BsModalService) {}
  
-  // openModal(template: TemplateRef<void>) {
-  //   this.modalRef = this.modalService.show(template, { class: 'modal-sm' });
-  // }
+  // // openModal(template: TemplateRef<void>) {
+  // //   this.modalRef = this.modalService.show(template, { class: 'modal-sm' });
+  // // }
  
-  // confirm(): void {
-  //   this.message = 'Confirmed!';
-  //   this.modalRef?.hide();
-  // }
+  // // confirm(): void {
+  // //   this.message = 'Confirmed!';
+  // //   this.modalRef?.hide();
+  // // }
  
-  // decline(): void {
-  //   this.message = 'Declined!';
-  //   this.modalRef?.hide();
-  // }
+  // // decline(): void {
+  // //   this.message = 'Declined!';
+  // //   this.modalRef?.hide();
+  // // }
 }

@@ -16,6 +16,7 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { UserListComponent } from './components/user-list/user-list.component';
 import { AddUserComponent } from './components/add-user/add-user.component';
 import { SearchUserPipe } from './pipes/search-user.pipe';
+import { BsModalService } from 'ngx-bootstrap/modal';
 
 
 @NgModule({
@@ -41,7 +42,7 @@ import { SearchUserPipe } from './pipes/search-user.pipe';
     TooltipModule.forRoot()
    
   ],
-  providers: [],
+  providers: [BsModalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
