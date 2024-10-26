@@ -26,6 +26,7 @@
                     <th scope="col">Description</th>
                     <th scope="col">Due date</th>
                     <th scope="col">Priority</th>
+                    <th scope="col">Assignee</th>
                     <th scope="col">Actions
                      
                     </th>
@@ -37,9 +38,10 @@
                     <td>{{task.title }}</td>
                     <td>{{task.description}}</td>
                     <td>{{task.dueDate | date}}</td>
-                    <td [ngClass]="task.priority=='High'? 'text-danger' : ''" >{{task.priority}}</td>
+                    <td [ngClass]="{'text-danger' :task.priority == 'High' , 'text-warning' : task.priority == 'Medium'}">{{task.priority}}</td>
+                    <td>{{task.assignee.name}}</td>
                     <td> <i class="bi bi-pencil bg bg-primary p-2 m-1 text-light rounded-2"
-                            [routerLink]="['/edit' ,task.id ]"></i> <i
+                            [routerLink]="['/edit-task' ,task.id ]"></i> <i
                             class="bi bi-trash bg bg-danger text-light p-2 m-1 rounded-2"
                             (click)="onDeleteTask(task.id, template)"></i></td>
                 </tr>

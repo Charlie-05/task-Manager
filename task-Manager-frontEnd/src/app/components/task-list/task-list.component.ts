@@ -40,6 +40,7 @@ export class TaskListComponent {
   loadTasks() {
     this.taskService.getTasks().subscribe(data => {
       this.tasks = data;
+      console.log(data);
     })
   }
 

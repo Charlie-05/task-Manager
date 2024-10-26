@@ -16,6 +16,10 @@
                     <option value="Medium">Medium</option>
                     <option value="Low">Low</option>
                 </select>
+                <label for="assigneeId" class="form-label">Select the assignee</label>
+                <select formControlName="assigneeId" class="form-control">
+                    <option *ngFor="let user of users" [value]="user.id" >{{user.name}}</option>
+                </select>
                 <button type="submit" class="btn btn-primary mt-3" [disabled]="addTaskForm.invalid">Submit</button>
             </form>
         </div>

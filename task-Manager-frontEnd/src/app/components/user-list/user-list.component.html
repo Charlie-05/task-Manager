@@ -11,7 +11,8 @@
             </div>
             <div class="col-8"></div>
             <div class="col-1">
-                <button type="button" class="btn btn-dark" [routerLink]="['/add-user']"><i class="bi bi-plus me-2"></i>New
+                <button type="button" class="btn btn-dark" [routerLink]="['/add-user']"><i
+                        class="bi bi-plus me-2"></i>New
                     User</button>
             </div>
         </div>
@@ -26,6 +27,7 @@
                     <th scope="col">Phone</th>
                     <th scope="col">Email</th>
                     <th scope="col">Password</th>
+                    <th scope="col">Address</th>
                     <th scope="col">Actions</th>
                 </tr>
             </thead>
@@ -36,6 +38,10 @@
                     <td>{{user.phone}}</td>
                     <td>{{user.email }}</td>
                     <td>{{user.password}}</td>
+                    <td>{{user.address?.addressLine1}},
+                        {{user.address?.addressLine2}},
+                        {{user.address?.city}},
+                    </td>
                     <td> <i class="bi bi-pencil bg bg-primary p-2 m-1 text-light rounded-2"
                             [routerLink]="['/edit-user' ,user.id ]"></i> <i
                             class="bi bi-trash bg bg-danger text-light p-2 m-1 rounded-2"
@@ -44,6 +50,6 @@
 
             </tbody>
         </table>
-        
+
     </div>
 </div>

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TaskManagement.Data;
 
@@ -11,9 +12,11 @@ using TaskManagement.Data;
 namespace TaskManagement.Migrations
 {
     [DbContext(typeof(TaskContext))]
-    partial class TaskContextModelSnapshot : ModelSnapshot
+    [Migration("20241026063119_address-assignee")]
+    partial class addressassignee
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -139,7 +142,8 @@ namespace TaskManagement.Migrations
 
             modelBuilder.Entity("TaskManagement.Models.User", b =>
                 {
-                    b.Navigation("Address");
+                    b.Navigation("Address")
+                        .IsRequired();
 
                     b.Navigation("Tasks");
                 });

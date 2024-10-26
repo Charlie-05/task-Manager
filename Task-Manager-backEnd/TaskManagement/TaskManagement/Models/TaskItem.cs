@@ -14,5 +14,9 @@ namespace TaskManagement.Models
 
         [Required]
         public string Priority { get; set; }
+
+        public User? Assignee { get; set; }
+
+        public int AssigneeId { get; set; }
     }
 }

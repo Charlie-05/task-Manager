@@ -2,20 +2,38 @@
     <div class="row">
         <div class="col-2"></div>
         <div class="col-8">
-            <form [formGroup]="addUserForm" (ngSubmit)="onAddUser()">
+            <form [formGroup]="addUserForm">
                 <h2 class="text-danger mt-3">{{isEditForm? 'Edit User' : 'Add New User'}}</h2>
                 <label for="name" class="form-label">Name : </label>
-                <input type="text" class="form-control" id="name" formControlName="name">
+                <input type="text" class="form-control" id="name" formControlName="name" [ngClass]="{'errorBorder':isSubmmited && addUserForm.get('name').errors}">
+                <small class="text-danger" *ngIf="isSubmmited && addUserForm.get('name').errors">
+                    Name is Required
+                </small><br>
                 <label for="phone" class="form-label">Phone : </label>
                 <input type="text" class="form-control" id="phone" formControlName="phone">
                 <label for="email" class="form-label">Email : </label>
-                <input type="email" class="form-control" id="" formControlName="email">
+                <input type="email" class="form-control" id="" formControlName="email" [ngClass]="{'errorBorder':isSubmmited && addUserForm.get('email').errors}">
+                <small class="text-danger" *ngIf="isSubmmited && addUserForm.get('email').errors">
+                    Check your email address
+                </small><br>
                 <label for="password" class="form-label">Password : </label>
                 <input type="password" class="form-control" id="" formControlName="password">
-                <button type="submit" class="btn btn-primary mt-3" [disabled]="addUserForm.invalid">Submit</button>
+                <div formGroupName="address">
+                    <label for="addressLine1" class="form-label">Address Line 1 : </label>
+                    <input type="text" class="form-control" id="addressLine1" formControlName="addressLine1" name="addressLine1">
+                    <small class="text-danger"
+                        *ngIf="addUserForm.get('addUserForm.addressLine1')?.invalid && addUserForm.get('addUserForm.addressLine1')?.touched" >Address
+                        line 1 is required</small><br>
+                    <label for="addressLine1" class="form-label">Address Line 2 : </label>
+                    <input type="text" class="form-control" id="addressLine1" formControlName="addressLine2">
+                    <label for="city" class="form-label">City : </label>
+                    <input type="text" class="form-control" id="city" formControlName="city">
+                </div>
+                <button type="submit" class="btn btn-primary mt-3" [disabled]="loadingIndicator && this.addUserForm.invalid" (click)="onAddUser()"><div class="spinner-border fs-6" role="status" *ngIf="loadingIndicator">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>Submit</button>
             </form>
         </div>
         <div class="col-2"></div>
     </div>
 </div>
-
