@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { UserService } from '../../services/user.service';
 import { User } from '../../Models/user';
+import { TaskService } from '../../services/task.service';
 
 @Component({
   selector: 'app-add-user',
@@ -14,6 +15,7 @@ export class AddUserComponent {
   addUserForm: any;
   user: any;
   currentUserId: any;
+  currentUserAddressId?: number = 0;
   currentUser!: User;
   isEditForm: boolean = false;
   isSubmmited: boolean = false;
@@ -29,7 +31,7 @@ export class AddUserComponent {
       name: ['', [Validators.required]],
       email: ['', [Validators.email]],
       phone: [''],
-      password: ['', [Validators.required]],
+      password: ['', [Validators.required, Validators.minLength(5)]],
       address: this.fb.group({
         addressLine1: ['', Validators.required],
         addressLine2: [''],
@@ -42,6 +44,7 @@ export class AddUserComponent {
     if (this.isEditForm) {
       this.userService.getUserById(this.currentUserId).subscribe(data => {
         this.currentUser = data;
+        this.currentUserAddressId = data.address?.id;
         console.log(data);
         this.addUserForm.patchValue(data);
       })
@@ -56,12 +59,7 @@ export class AddUserComponent {
 
     if (this.addUserForm.valid) {
       this.user.id = 0;
-      // this.userService.createuser(this.user).subscribe(data => {
-      //   this.toastr.success("successfully added", "Success");
-      //   this.router.navigate(['/users']);
-      //   this.isSubmmited = false;
 
-      // })
       this.userService.createuser(this.user).subscribe({
         next: (res: any) => {
           this.toastr.success("successfully added", "Success");
@@ -80,6 +78,9 @@ export class AddUserComponent {
       })
     } else if (this.isEditForm == true) {
       let user = (this.addUserForm.value);
+      console.log(this.currentUserAddressId)
+      user.address.id = this.currentUserAddressId;
+      console.log(user);
       this.userService.editUser(user, this.currentUser.id).subscribe(data => {
         this.isSubmmited = false;
         this.toastr.success('successfully updated', 'Success');
@@ -91,8 +92,8 @@ export class AddUserComponent {
       this.loadingIndicator = false;
     }
 
-
-
   }
+
+
 
 }

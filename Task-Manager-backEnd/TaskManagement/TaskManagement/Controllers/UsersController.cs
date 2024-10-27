@@ -53,6 +53,7 @@ namespace TaskManagement.Controllers
             }
 
             _context.Entry(user).State = EntityState.Modified;
+            _context.Entry(user.Address).State = EntityState.Modified; 
 
             try
             {

@@ -1,3 +1,7 @@
 # Ignore NuGet Packages
 packages/
 *.nupkg
+
+obj
+bin
+.vs

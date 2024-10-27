@@ -1,4 +1,5 @@
 import { Address } from "./address";
+import { Task } from "./task";
 
 export interface User {
     id : number;
@@ -6,5 +7,6 @@ export interface User {
     email : string ;
     phone : string;
     password : string ;
-    address? : Address
+    address? : Address;
+    tasks : Task[];
 }

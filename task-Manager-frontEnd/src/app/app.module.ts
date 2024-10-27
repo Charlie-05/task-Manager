@@ -8,7 +8,7 @@ import { TaskListComponent } from './components/task-list/task-list.component';
 import { CommonModule } from '@angular/common';
 import { TaskAddComponent } from './components/task-add/task-add.component';
 import { TaskEditComponent } from './components/task-edit/task-edit.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormArray, FormsModule, ReactiveFormsModule, UntypedFormArray } from '@angular/forms';
 import { SearchTaskPipe } from './pipes/search-task.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
@@ -17,6 +17,7 @@ import { UserListComponent } from './components/user-list/user-list.component';
 import { AddUserComponent } from './components/add-user/add-user.component';
 import { SearchUserPipe } from './pipes/search-user.pipe';
 import { BsModalService } from 'ngx-bootstrap/modal';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 
 @NgModule({
@@ -39,8 +40,9 @@ import { BsModalService } from 'ngx-bootstrap/modal';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
-    TooltipModule.forRoot()
-   
+    TooltipModule.forRoot(),
+    BsDatepickerModule,
+
   ],
   providers: [BsModalService],
   bootstrap: [AppComponent]

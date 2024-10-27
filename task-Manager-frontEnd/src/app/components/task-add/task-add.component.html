@@ -1,15 +1,14 @@
 <div class="container">
-    <div class="row">
-        <div class="col-2"></div>
-        <div class="col-8">
-            <form [formGroup]="addTaskForm" (ngSubmit)="onAddTask()">
+    <form [formGroup]="addTaskForm" (ngSubmit)="onAddTask()">
+        <div class="row">
+            <div class="col-8">
                 <h2 class="text-danger mt-3">Add New Task</h2>
                 <label for="title" class="form-label">Title : </label>
                 <input type="text" class="form-control" id="" formControlName="title">
                 <label for="description" class="form-label">Description : </label>
                 <input type="text" class="form-control" id="" formControlName="description">
-                <label for="dueDate" class="form-label">Due Date : </label>
-                <input type="date" class="form-control" id="" formControlName="dueDate">
+                <label for="dueDate" class="form-label">Due Date : <i class="bi bi-calendar2-date-fill"></i> </label>
+                <input type="text" class="form-control" id="" formControlName="dueDate" bsDatepicker>
                 <label for="priority" class="form-label">Select the priority</label>
                 <select formControlName="priority" class="form-control">
                     <option value="High">High</option>
@@ -18,11 +17,32 @@
                 </select>
                 <label for="assigneeId" class="form-label">Select the assignee</label>
                 <select formControlName="assigneeId" class="form-control">
-                    <option *ngFor="let user of users" [value]="user.id" >{{user.name}}</option>
+                    <option *ngFor="let user of users" [value]="user.id">{{user.name}}</option>
                 </select>
                 <button type="submit" class="btn btn-primary mt-3" [disabled]="addTaskForm.invalid">Submit</button>
-            </form>
+
+            </div>
+
+            <div class="col-4 mt-4" formArrayName="checkLists">
+                <h3>Add CheckLists</h3>
+                <div class="row" *ngFor="let checkList of myCheckLists.controls;let i=index;">
+                    <div [formGroupName]="i">
+                        <div class="row mt-2">
+                            <div class="col-2">
+                                <input type="checkbox" class="form-check-input fs-4" id="" formControlName="isDone">
+                            </div>
+                            <div class="col-8">
+                                <input type="text" class="form-control" id="" formControlName="name">
+                            </div>
+                            <div class="col-2">
+                                <button class="btn btn-danger" (click)="removeCheckList(i)">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <button class="btn btn-success" type="button" (click)="addCheckList()">Add</button>
+            </div>
         </div>
-        <div class="col-2"></div>
-    </div>
+    </form>
 </div>

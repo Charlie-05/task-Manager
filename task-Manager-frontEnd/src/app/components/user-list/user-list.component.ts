@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, TemplateRef } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { User } from '../../Models/user';
-import { BsModalRef } from 'ngx-bootstrap/modal';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-user-list',
@@ -10,49 +11,49 @@ import { BsModalRef } from 'ngx-bootstrap/modal';
 })
 export class UserListComponent {
 
-  constructor(private userService : UserService){
+  constructor(private userService: UserService, private modalService: BsModalService, private toastr: ToastrService) {
 
   }
 
-  users : User[] = [];
+  users: User[] = [];
   features = {
-    searchUser : ''
+    searchUser: ''
   }
- 
 
-  ngOnInit() : void{
+  delUserId: number = 0;
+
+  modalRef?: BsModalRef;
+
+  ngOnInit(): void {
     this.loadUsers();
   }
 
-  onDeleteUser(userId : number){
-    if(confirm("Do you want to delete this user?")){
-      this.userService.deleteUser(userId).subscribe(data => {
-        this.loadUsers();
-       })
-    }
+  onDeleteUser(userId: number, template: TemplateRef<void>) {
+    this.modalRef = this.modalService.show(template, { class: 'modal-sm' });
+    this.delUserId = userId;
+    // if (confirm("Do you want to delete this user?")) {
+    //   this.userService.deleteUser(userId).subscribe(data => {
+    //     this.loadUsers();
+    //   })
+    // }
   }
 
-  loadUsers(){
-    this.userService.getUsers().subscribe(data =>{
+  loadUsers() {
+    this.userService.getUsers().subscribe(data => {
       this.users = data;
     })
   }
 
-  //  modalRef?: BsModalRef;
-  // // message?: string;
-  // // constructor(private modalService: BsModalService) {}
- 
-  // // openModal(template: TemplateRef<void>) {
-  // //   this.modalRef = this.modalService.show(template, { class: 'modal-sm' });
-  // // }
- 
-  // // confirm(): void {
-  // //   this.message = 'Confirmed!';
-  // //   this.modalRef?.hide();
-  // // }
- 
-  // // decline(): void {
-  // //   this.message = 'Declined!';
-  // //   this.modalRef?.hide();
-  // // }
+  confirm(): void {
+    this.userService.deleteUser(this.delUserId).subscribe(data => {
+      this.loadUsers();
+      this.toastr.success("successfully deleted", "Success");
+      this.modalRef?.hide();
+    })
+
+  }
+
+  decline(): void {
+    this.modalRef?.hide();
+  }
 }
