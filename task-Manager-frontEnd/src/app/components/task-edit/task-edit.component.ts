@@ -38,7 +38,7 @@ export class TaskEditComponent {
       this.editTaskForm.get('dueDate').patchValue( new Date(data.dueDate).toISOString().slice(0,10));
     })
       this.userService.getUsers().subscribe(data =>{
-       // console.log(data);
+        console.log(data);
         this.users = data;
       })
     

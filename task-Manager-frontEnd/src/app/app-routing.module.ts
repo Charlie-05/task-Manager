@@ -5,6 +5,8 @@ import { TaskAddComponent } from './components/task-add/task-add.component';
 import { TaskEditComponent } from './components/task-edit/task-edit.component';
 import { UserListComponent } from './components/user-list/user-list.component';
 import { AddUserComponent } from './components/add-user/add-user.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 const routes: Routes = [
   { path: 'tasks', component: TaskListComponent },
@@ -13,6 +15,8 @@ const routes: Routes = [
   { path: 'add-task', component: TaskAddComponent },
   { path: 'edit-task/:id', component: TaskEditComponent },
   { path: 'edit-user/:id', component: AddUserComponent },
+  { path: 'logIn', component: LoginComponent },
+  { path: 'register', component: RegisterComponent }
 ];
 
 @NgModule({
@@ -21,4 +25,3 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 ;
- 

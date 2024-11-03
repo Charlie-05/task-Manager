@@ -1,9 +1,12 @@
+import { CheckList } from "./checklist";
+
 export interface Task {
     id : number;
     title : string ;
     description : string ;
     dueDate : string;
     priority : string ;
+    checkLists : CheckList[]
 
     // constructor(obj : any){
     //     this.id = obj.id != null ? obj.id : null;

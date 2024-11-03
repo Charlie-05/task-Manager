@@ -40,10 +40,11 @@ export class TaskAddComponent implements OnInit{
 
   addCheckList(){
     this.myCheckLists.push(this.fb.group({
-      name : [''],
+      name : ['',[Validators.required]],
       isDone : [false]
     }))
   }
+  
   removeCheckList(index : number){
     this.myCheckLists.removeAt(index);
   }

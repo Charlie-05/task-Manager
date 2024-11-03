@@ -776,3 +776,5 @@ X:\Angular\Task_manager_main\Task-Manager-backEnd\TaskManagement\TaskManagement\
 X:\Angular\Task_manager_main\Task-Manager-backEnd\TaskManagement\TaskManagement\obj\Debug\net8.0\TaskManagement.genruntimeconfig.cache
 X:\Angular\Task_manager_main\Task-Manager-backEnd\TaskManagement\TaskManagement\obj\Debug\net8.0\ref\TaskManagement.dll
 X:\Angular\Task_manager_main\Task-Manager-backEnd\TaskManagement\TaskManagement\obj\Debug\net8.0\TaskManagement.sourcelink.json
+X:\Angular\Task_manager_main\Task-Manager-backEnd\TaskManagement\TaskManagement\bin\Debug\net8.0\BCrypt.Net.dll
+X:\Angular\Task_manager_main\Task-Manager-backEnd\TaskManagement\TaskManagement\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

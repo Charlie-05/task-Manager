@@ -140,6 +140,34 @@ namespace TaskManagement.Migrations
                     b.ToTable("Users");
                 });
 
+            modelBuilder.Entity("TaskManagement.Models.UserAccount", b =>
+                {
+                    b.Property<int>("UserId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserId"));
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PasswordHash")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Role")
+                        .HasColumnType("int");
+
+                    b.HasKey("UserId");
+
+                    b.ToTable("UsersAccounts");
+                });
+
             modelBuilder.Entity("TaskManagement.Models.Address", b =>
                 {
                     b.HasOne("TaskManagement.Models.User", "User")

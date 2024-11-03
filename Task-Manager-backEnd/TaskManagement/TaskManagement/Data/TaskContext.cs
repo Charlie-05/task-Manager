@@ -13,6 +13,7 @@ namespace TaskManagement.Data
 
         public DbSet<User> Users { get; set; }  
         public DbSet<Address> Addresses { get; set; }
+        public DbSet<UserAccount> UsersAccounts { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

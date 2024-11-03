@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row">
+        <div class="col-8">
+            <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+                <h2 class="text-danger mt-3">Sign Up</h2>
+                <div class="input-group mt-2">
+                    <span class="input-group-text"><i class="bi bi-person"></i></span>
+                    <input type="text" formControlName="fullName" class="form-control" placeholder="John Doe">
+                </div>
+                <div class="input-group mt-2">
+                    <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                    <input type="text" formControlName="email" class="form-control" placeholder="Your Email">
+
+                </div>
+                <div class="input-group mt-2">
+                    <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                    <input type="text" formControlName="password" class="form-control" placeholder="Password"
+                        [(ngModel)]="this.passwordInput">
+
+                </div>
+                <div class="input-group mt-2">
+                    <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+                    <input type="text" class="form-control" placeholder="Repeat your Password"
+                        (keyup)="checkPassword($event)">
+                </div>
+                <div class="input-group mt-2">
+                    <span class="input-group-text"><i class="bi bi-person-workspace"></i></span>
+                    <select formControlName="role" class="form-control">
+                        <option value="">Select your role</option>
+                        <option value="0">Admin</option>
+                        <option value="1">Editor</option>
+                        <option value="2">Viewer</option>
+                    </select>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-1">
+                        <input type="checkbox" class="form-check-input fs-4 ms-4" id="">
+                    </div>
+                    <div class="col-5 mt-1">
+                        <p>I agree to all statements in <u class="text-primary">Terms of Service</u></p>
+                    </div>
+                    <div class="col-6"></div>
+                </div>
+                <div class="row">
+                    <button type="submit" class="btn btn-primary mt-3" [disabled]="this.registerForm.invalid">
+                        Register
+                    </button>
+                </div>
+
+            </form>
+        </div>
+        <div class="col-4"><img src="signUp.jpg"></div>
+    </div>

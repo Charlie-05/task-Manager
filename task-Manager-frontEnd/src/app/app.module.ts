@@ -18,6 +18,8 @@ import { AddUserComponent } from './components/add-user/add-user.component';
 import { SearchUserPipe } from './pipes/search-user.pipe';
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 @NgModule({
@@ -29,7 +31,9 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
     SearchTaskPipe,
     UserListComponent,
     AddUserComponent,
-    SearchUserPipe
+    SearchUserPipe,
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +44,7 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
-    TooltipModule.forRoot(),
+    //TooltipModule.forRoot(),
     BsDatepickerModule,
 
   ],

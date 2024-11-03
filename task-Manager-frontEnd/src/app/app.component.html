@@ -1,6 +1,11 @@
 <!-- <a [routerLink]="['/tasks']">Tasks</a> 
 <a [routerLink]="['/users']">Users</a> -->
-
+<nav class="navbar bg-body-tertiary">
+    <form class="container-fluid justify-content-end">
+        <button class="btn btn-outline-success me-2" type="button" [routerLink]="['register']">Sign Up</button>
+        <button class="btn btn-outline-success me-2" type="button" [routerLink]="['logIn']">Log In</button>
+    </form>
+</nav>
 <main class="d-flex flex-nowrap">
     <h1 class="visually-hidden">Sidebars examples</h1>
 
@@ -12,9 +17,9 @@
             <span class="fs-4">Sidebar</span>
         </a>
         <hr>
-        <ul class="nav nav-pills flex-column mb-auto" >
+        <ul class="nav nav-pills flex-column mb-auto">
             <li class="nav-item">
-                <a href="#" class="nav-link active" aria-current="page" >
+                <a href="#" class="nav-link active" aria-current="page">
                     <svg class="bi pe-none me-2" width="16" height="16">
                         <use xlink:href="#home" />
                     </svg>
@@ -22,7 +27,7 @@
                 </a>
             </li>
             <li>
-                <a href="#" class="nav-link text-white" [routerLink]="['/tasks']"  (click)="setBg($event)" >
+                <a href="#" class="nav-link text-white" [routerLink]="['/tasks']" (click)="setBg($event)">
                     <svg class="bi pe-none me-2" width="16" height="16">
                         <use xlink:href="#speedometer2" />
                     </svg>

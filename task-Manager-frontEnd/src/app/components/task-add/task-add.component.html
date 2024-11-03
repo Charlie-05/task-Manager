@@ -29,13 +29,19 @@
                     <div [formGroupName]="i">
                         <div class="row mt-2">
                             <div class="col-2">
-                                <input type="checkbox" class="form-check-input fs-4" id="" formControlName="isDone">
+                                <input type="checkbox" class="form-check-input fs-4 ms-4" id=""
+                                    formControlName="isDone">
+
                             </div>
                             <div class="col-8">
                                 <input type="text" class="form-control" id="" formControlName="name">
+                                <small
+                                    *ngIf="addTaskForm.get('checkLists.name')?.errors && addTaskForm.get('checkLists.name')?.touched">Name
+                                    is required</small>
                             </div>
                             <div class="col-2">
-                                <button class="btn btn-danger" (click)="removeCheckList(i)">Remove</button>
+                                <button class="btn btn-danger" type="button"
+                                    (click)="removeCheckList(i)">Remove</button>
                             </div>
                         </div>
                     </div>

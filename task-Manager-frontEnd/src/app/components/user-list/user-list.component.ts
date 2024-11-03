@@ -31,11 +31,6 @@ export class UserListComponent {
   onDeleteUser(userId: number, template: TemplateRef<void>) {
     this.modalRef = this.modalService.show(template, { class: 'modal-sm' });
     this.delUserId = userId;
-    // if (confirm("Do you want to delete this user?")) {
-    //   this.userService.deleteUser(userId).subscribe(data => {
-    //     this.loadUsers();
-    //   })
-    // }
   }
 
   loadUsers() {
