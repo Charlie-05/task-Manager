@@ -6,6 +6,10 @@ export interface UserAccount {
     role: any
 }
 
+export interface IToken{
+    token: string;
+}
+
 export enum Roles {
     Admin = 0,
     Editor = 1,

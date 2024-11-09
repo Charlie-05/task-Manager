@@ -20,6 +20,11 @@ import { BsModalService } from 'ngx-bootstrap/modal';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
+import { BlankLayoutComponent } from './layouts/blank-layout/blank-layout.component';
+import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+
+
 
 
 @NgModule({
@@ -33,7 +38,10 @@ import { LoginComponent } from './components/login/login.component';
     AddUserComponent,
     SearchUserPipe,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    BlankLayoutComponent,
+    AdminLayoutComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -48,7 +56,7 @@ import { LoginComponent } from './components/login/login.component';
     BsDatepickerModule,
 
   ],
-  providers: [BsModalService],
+  providers: [BsModalService, provideAnimationsAsync()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

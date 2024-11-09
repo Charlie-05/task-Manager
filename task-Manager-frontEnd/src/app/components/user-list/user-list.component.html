@@ -11,7 +11,7 @@
             </div>
             <div class="col-8"></div>
             <div class="col-1">
-                <button type="button" class="btn btn-dark" [routerLink]="['/add-user']"><i
+                <button type="button" class="btn btn-dark" [routerLink]="['/admin/add-user']"><i
                         class="bi bi-plus me-2"></i>New
                     User</button>
             </div>
@@ -46,7 +46,7 @@
                     <td>{{user.tasks.length}}</td>
                     <td>
                         <i class="bi bi-pencil bg bg-primary p-2 m-1 text-light rounded-2"
-                            [routerLink]="['/edit-user' ,user.id ]"></i> <i
+                            [routerLink]="['/admin/edit-user' ,user.id ]"></i> <i
                             class="bi bi-trash bg bg-danger text-light p-2 m-1 rounded-2"
                             (click)="onDeleteUser(user.id , template)">
                         </i>

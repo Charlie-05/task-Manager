@@ -11,7 +11,7 @@
             </div>
             <div class="col-8"></div>
             <div class="col-1">
-                <button type="button" class="btn btn-dark" [routerLink]="['/add-task']"><i class="bi bi-plus me-2"></i>New
+                <button type="button" class="btn btn-dark" [routerLink]="['/admin/add-task']"><i class="bi bi-plus me-2"></i>New
                     Task</button>
             </div>
         </div>
@@ -41,7 +41,7 @@
                     <td [ngClass]="{'text-danger' :task.priority == 'High' , 'text-warning' : task.priority == 'Medium'}">{{task.priority}}</td>
                     <td>{{task.assignee.name}}</td>
                     <td> <i class="bi bi-pencil bg bg-primary p-2 m-1 text-light rounded-2"
-                            [routerLink]="['/edit-task' ,task.id ]"></i> <i
+                            [routerLink]="['/admin/edit-task' ,task.id ]"></i> <i
                             class="bi bi-trash bg bg-danger text-light p-2 m-1 rounded-2"
                             (click)="onDeleteTask(task.id, template)"></i></td>
                 </tr>
