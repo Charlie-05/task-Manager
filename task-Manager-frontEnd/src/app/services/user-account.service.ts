@@ -25,12 +25,12 @@ export class UserAccountService {
   isLoggedIn() {
     if (localStorage.getItem('token')) {
       const token = localStorage.getItem('token');
-      if(token){
-        const decoded : any = jwtDecode(token);
-        localStorage.setItem('user' , JSON.stringify(decoded));
+      if (token) {
+        const decoded: any = jwtDecode(token);
+        localStorage.setItem('user', JSON.stringify(decoded));
       }
       return true;
-    } 
+    }
     return false;
   }
 

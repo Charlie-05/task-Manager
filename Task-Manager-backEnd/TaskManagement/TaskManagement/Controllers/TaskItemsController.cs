@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -23,6 +24,7 @@ namespace TaskManagement.Controllers
 
         // GET: api/TaskItems
         [HttpGet]
+        [Authorize]
         public async Task<ActionResult<IEnumerable<TaskItem>>> GetTasks()
         {
             return await _context.Tasks.Include(a => a.Assignee).Include(t => t.CheckLists).ToListAsync();
@@ -30,6 +32,7 @@ namespace TaskManagement.Controllers
 
         // GET: api/TaskItems/5
         [HttpGet("{id}")]
+        [Authorize]
         public async Task<ActionResult<TaskItem>> GetTaskItem(int id)
         {
             var taskItem = await _context.Tasks.Include(a => a.Assignee).Include(t=> t.CheckLists).FirstOrDefaultAsync(t=> t.Id == id);

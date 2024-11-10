@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { TaskListComponent } from './components/task-list/task-list.component';
 import { CommonModule } from '@angular/common';
 import { TaskAddComponent } from './components/task-add/task-add.component';
@@ -23,6 +23,7 @@ import { LoginComponent } from './components/login/login.component';
 import { BlankLayoutComponent } from './layouts/blank-layout/blank-layout.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MyInterceptorService } from './interceptors/my-interceptor.service';
 
 
 
@@ -56,7 +57,9 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     BsDatepickerModule,
 
   ],
-  providers: [BsModalService, provideAnimationsAsync()],
+  providers: [BsModalService, provideAnimationsAsync(), {
+    provide : HTTP_INTERCEPTORS , useClass : MyInterceptorService , multi : true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

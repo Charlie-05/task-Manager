@@ -98,7 +98,7 @@ namespace TaskManagement.Controllers
                 issuer: _configuration["JWT:Issuer"],
                 audience: _configuration["JWT:Audience"],
                 claims: claimList,
-                expires: DateTime.Now.AddDays(1),
+                expires: DateTime.Now.AddMinutes(1),
                 signingCredentials : credentials
                 );
             var res = new TokenModel();
