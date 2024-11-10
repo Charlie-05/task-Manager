@@ -9,7 +9,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { BlankLayoutComponent } from './layouts/blank-layout/blank-layout.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
-import { AuthGuard } from './auth.guard';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
 

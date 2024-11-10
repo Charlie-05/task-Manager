@@ -35,7 +35,7 @@
                 </a>
             </li>
             <li>
-                <a href="#" class="nav-link text-white" [routerLink]="['/admin/users']">
+                <a href="#" class="nav-link text-white" [routerLink]="['/admin/users']" *appHasRole="'admin'">
                     <svg class="bi pe-none me-2" width="16" height="16">
                         <use xlink:href="#table" />
                     </svg>
@@ -44,7 +44,7 @@
 
             </li>
             <li>
-                <a href="#" class="nav-link text-white">
+                <a  class="nav-link text-white" (click)="openModalWithComponent()">
                     <svg class="bi pe-none me-2" width="16" height="16">
                         
                     </svg>

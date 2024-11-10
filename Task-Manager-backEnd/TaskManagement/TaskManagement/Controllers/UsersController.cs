@@ -32,7 +32,7 @@ namespace TaskManagement.Controllers
 
         // GET: api/Users/5
         [HttpGet("{id}")]
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<User>> GetUser(int id)
         {
             var user = await _context.Users.Include(u => u.Tasks).Include(u => u.Address).FirstOrDefaultAsync(u => u.Id == id);

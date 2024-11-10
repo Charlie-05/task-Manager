@@ -1,5 +1,5 @@
 import { CanActivate, CanActivateFn, Router } from '@angular/router';
-import { UserAccountService } from './services/user-account.service';
+import { UserAccountService } from '../services/user-account.service';
 import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'

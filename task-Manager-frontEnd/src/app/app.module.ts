@@ -24,6 +24,7 @@ import { BlankLayoutComponent } from './layouts/blank-layout/blank-layout.compon
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MyInterceptorService } from './interceptors/my-interceptor.service';
+import { HasRoleDirective } from './directives/has-role.directive';
 
 
 
@@ -42,6 +43,7 @@ import { MyInterceptorService } from './interceptors/my-interceptor.service';
     LoginComponent,
     BlankLayoutComponent,
     AdminLayoutComponent,
+    HasRoleDirective,
 
   ],
   imports: [

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { UserAccountService } from '../../services/user-account.service';
 import { Roles, UserAccount } from '../../Models/userAccount';
 
@@ -31,10 +31,10 @@ export class RegisterComponent {
 
   constructor(private fb: FormBuilder , private userAccountService : UserAccountService) {
     this.registerForm = this.fb.group({
-      fullName: [''],
-      email: [''],
-      password: [''],
-      role: [''],
+      fullName: ['' , [Validators.required]],
+      email: ['' , [Validators.required , Validators.email]],
+      password: ['' , [Validators.required]],
+      role: ['' , [Validators.required]],
     })
   }
 

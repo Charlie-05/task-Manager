@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "X:\\Angular\\Task_manager_main\\Task-Manager-backEnd\\TaskManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{67F90668-ABE2-471C-9891-E41818FA89CA}|TaskManagement\\TaskManagement.csproj|x:\\angular\\task_manager_main\\task-manager-backend\\taskmanagement\\taskmanagement\\controllers\\taskitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{67F90668-ABE2-471C-9891-E41818FA89CA}|TaskManagement\\TaskManagement.csproj|solutionrelative:taskmanagement\\controllers\\taskitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{67F90668-ABE2-471C-9891-E41818FA89CA}|TaskManagement\\TaskManagement.csproj|x:\\angular\\task_manager_main\\task-manager-backend\\taskmanagement\\taskmanagement\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67F90668-ABE2-471C-9891-E41818FA89CA}|TaskManagement\\TaskManagement.csproj|solutionrelative:taskmanagement\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{67F90668-ABE2-471C-9891-E41818FA89CA}|TaskManagement\\TaskManagement.csproj|x:\\angular\\task_manager_main\\task-manager-backend\\taskmanagement\\taskmanagement\\models\\useraccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{67F90668-ABE2-471C-9891-E41818FA89CA}|TaskManagement\\TaskManagement.csproj|solutionrelative:taskmanagement\\models\\useraccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{67F90668-ABE2-471C-9891-E41818FA89CA}|TaskManagement\\TaskManagement.csproj|x:\\angular\\task_manager_main\\task-manager-backend\\taskmanagement\\taskmanagement\\controllers\\useraccountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67F90668-ABE2-471C-9891-E41818FA89CA}|TaskManagement\\TaskManagement.csproj|solutionrelative:taskmanagement\\controllers\\useraccountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{67F90668-ABE2-471C-9891-E41818FA89CA}|TaskManagement\\TaskManagement.csproj|x:\\angular\\task_manager_main\\task-manager-backend\\taskmanagement\\taskmanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{67F90668-ABE2-471C-9891-E41818FA89CA}|TaskManagement\\TaskManagement.csproj|solutionrelative:taskmanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{67F90668-ABE2-471C-9891-E41818FA89CA}|TaskManagement\\TaskManagement.csproj|x:\\angular\\task_manager_main\\task-manager-backend\\taskmanagement\\taskmanagement\\dtos\\logindata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67F90668-ABE2-471C-9891-E41818FA89CA}|TaskManagement\\TaskManagement.csproj|solutionrelative:taskmanagement\\dtos\\logindata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67F90668-ABE2-471C-9891-E41818FA89CA}|TaskManagement\\TaskManagement.csproj|x:\\angular\\task_manager_main\\task-manager-backend\\taskmanagement\\taskmanagement\\dtos\\useraccountmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67F90668-ABE2-471C-9891-E41818FA89CA}|TaskManagement\\TaskManagement.csproj|solutionrelative:taskmanagement\\dtos\\useraccountmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{67F90668-ABE2-471C-9891-E41818FA89CA}|TaskManagement\\TaskManagement.csproj|x:\\angular\\task_manager_main\\task-manager-backend\\taskmanagement\\taskmanagement\\dtos\\tokenmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,20 +27,16 @@
       "RelativeMoniker": "D:0:0:{67F90668-ABE2-471C-9891-E41818FA89CA}|TaskManagement\\TaskManagement.csproj|solutionrelative:taskmanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{67F90668-ABE2-471C-9891-E41818FA89CA}|TaskManagement\\TaskManagement.csproj|x:\\angular\\task_manager_main\\task-manager-backend\\taskmanagement\\taskmanagement\\controllers\\useraccountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{67F90668-ABE2-471C-9891-E41818FA89CA}|TaskManagement\\TaskManagement.csproj|solutionrelative:taskmanagement\\controllers\\useraccountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{67F90668-ABE2-471C-9891-E41818FA89CA}|TaskManagement\\TaskManagement.csproj|x:\\angular\\task_manager_main\\task-manager-backend\\taskmanagement\\taskmanagement\\controllers\\taskitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67F90668-ABE2-471C-9891-E41818FA89CA}|TaskManagement\\TaskManagement.csproj|solutionrelative:taskmanagement\\controllers\\taskitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{67F90668-ABE2-471C-9891-E41818FA89CA}|TaskManagement\\TaskManagement.csproj|x:\\angular\\task_manager_main\\task-manager-backend\\taskmanagement\\taskmanagement\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{67F90668-ABE2-471C-9891-E41818FA89CA}|TaskManagement\\TaskManagement.csproj|solutionrelative:taskmanagement\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{67F90668-ABE2-471C-9891-E41818FA89CA}|TaskManagement\\TaskManagement.csproj|x:\\angular\\task_manager_main\\task-manager-backend\\taskmanagement\\taskmanagement\\models\\useraccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67F90668-ABE2-471C-9891-E41818FA89CA}|TaskManagement\\TaskManagement.csproj|solutionrelative:taskmanagement\\models\\useraccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{67F90668-ABE2-471C-9891-E41818FA89CA}|TaskManagement\\TaskManagement.csproj|x:\\angular\\task_manager_main\\task-manager-backend\\taskmanagement\\taskmanagement\\dtos\\logindata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{67F90668-ABE2-471C-9891-E41818FA89CA}|TaskManagement\\TaskManagement.csproj|solutionrelative:taskmanagement\\dtos\\logindata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{67F90668-ABE2-471C-9891-E41818FA89CA}|TaskManagement\\TaskManagement.csproj|x:\\angular\\task_manager_main\\task-manager-backend\\taskmanagement\\taskmanagement\\dtos\\useraccountmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{67F90668-ABE2-471C-9891-E41818FA89CA}|TaskManagement\\TaskManagement.csproj|solutionrelative:taskmanagement\\dtos\\useraccountmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{67F90668-ABE2-471C-9891-E41818FA89CA}|TaskManagement\\TaskManagement.csproj|x:\\angular\\task_manager_main\\task-manager-backend\\taskmanagement\\taskmanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{67F90668-ABE2-471C-9891-E41818FA89CA}|TaskManagement\\TaskManagement.csproj|solutionrelative:taskmanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,37 +46,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "UsersController.cs",
               "DocumentMoniker": "X:\\Angular\\Task_manager_main\\Task-Manager-backEnd\\TaskManagement\\TaskManagement\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "TaskManagement\\Controllers\\UsersController.cs",
               "ToolTip": "X:\\Angular\\Task_manager_main\\Task-Manager-backEnd\\TaskManagement\\TaskManagement\\Controllers\\UsersController.cs",
               "RelativeToolTip": "TaskManagement\\Controllers\\UsersController.cs",
-              "ViewState": "AQIAAFMAAAAAAAAAAAAcwCIAAAATAAAA",
+              "ViewState": "AQIAABEAAAAAAAAAAAAQwCIAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-10T05:09:30.603Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "X:\\Angular\\Task_manager_main\\Task-Manager-backEnd\\TaskManagement\\TaskManagement\\Program.cs",
               "RelativeDocumentMoniker": "TaskManagement\\Program.cs",
               "ToolTip": "X:\\Angular\\Task_manager_main\\Task-Manager-backEnd\\TaskManagement\\TaskManagement\\Program.cs",
               "RelativeToolTip": "TaskManagement\\Program.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAAACQAAABHAAAA",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAiwCQAAABHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-03T10:55:45.176Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "TokenModel.cs",
               "DocumentMoniker": "X:\\Angular\\Task_manager_main\\Task-Manager-backEnd\\TaskManagement\\TaskManagement\\DTOs\\TokenModel.cs",
               "RelativeDocumentMoniker": "TaskManagement\\DTOs\\TokenModel.cs",
@@ -89,20 +89,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "TaskItemsController.cs",
               "DocumentMoniker": "X:\\Angular\\Task_manager_main\\Task-Manager-backEnd\\TaskManagement\\TaskManagement\\Controllers\\TaskItemsController.cs",
               "RelativeDocumentMoniker": "TaskManagement\\Controllers\\TaskItemsController.cs",
               "ToolTip": "X:\\Angular\\Task_manager_main\\Task-Manager-backEnd\\TaskManagement\\TaskManagement\\Controllers\\TaskItemsController.cs",
               "RelativeToolTip": "TaskManagement\\Controllers\\TaskItemsController.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAQwCIAAAATAAAA",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAAACIAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-03T08:27:44.283Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "appsettings.json",
               "DocumentMoniker": "X:\\Angular\\Task_manager_main\\Task-Manager-backEnd\\TaskManagement\\TaskManagement\\appsettings.json",
               "RelativeDocumentMoniker": "TaskManagement\\appsettings.json",
@@ -110,12 +110,11 @@
               "RelativeToolTip": "TaskManagement\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-03T08:26:24.972Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-03T08:26:24.972Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "LogInData.cs",
               "DocumentMoniker": "X:\\Angular\\Task_manager_main\\Task-Manager-backEnd\\TaskManagement\\TaskManagement\\DTOs\\LogInData.cs",
               "RelativeDocumentMoniker": "TaskManagement\\DTOs\\LogInData.cs",
@@ -128,7 +127,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "UserAccount.cs",
               "DocumentMoniker": "X:\\Angular\\Task_manager_main\\Task-Manager-backEnd\\TaskManagement\\TaskManagement\\Models\\UserAccount.cs",
               "RelativeDocumentMoniker": "TaskManagement\\Models\\UserAccount.cs",
@@ -136,12 +135,11 @@
               "RelativeToolTip": "TaskManagement\\Models\\UserAccount.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T07:21:15.277Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-03T07:21:15.277Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 3,
               "Title": "UserAccountModel.cs",
               "DocumentMoniker": "X:\\Angular\\Task_manager_main\\Task-Manager-backEnd\\TaskManagement\\TaskManagement\\DTOs\\UserAccountModel.cs",
               "RelativeDocumentMoniker": "TaskManagement\\DTOs\\UserAccountModel.cs",
@@ -149,17 +147,18 @@
               "RelativeToolTip": "TaskManagement\\DTOs\\UserAccountModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T04:41:20.125Z"
+              "WhenOpened": "2024-11-03T04:41:20.125Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "UserAccountController.cs",
               "DocumentMoniker": "X:\\Angular\\Task_manager_main\\Task-Manager-backEnd\\TaskManagement\\TaskManagement\\Controllers\\UserAccountController.cs",
               "RelativeDocumentMoniker": "TaskManagement\\Controllers\\UserAccountController.cs",
               "ToolTip": "X:\\Angular\\Task_manager_main\\Task-Manager-backEnd\\TaskManagement\\TaskManagement\\Controllers\\UserAccountController.cs",
               "RelativeToolTip": "TaskManagement\\Controllers\\UserAccountController.cs",
-              "ViewState": "AQIAAEQAAAAAAAAAAAAwwGQAAAAwAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAFoAAABDAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-03T04:37:14.927Z",
               "EditorCaption": ""
